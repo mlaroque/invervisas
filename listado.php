@@ -18,18 +18,6 @@
   </div>
 </div>
 
-<?php
-
-	if($post->ID == 91){
-		get_template_part("listados/escuelas");
-	}
-  elseif($post->ID == 1398){
-    get_template_part("listados/guias");
-  }
-
-?>
- 
-
 
 <div class="container">
   <div class="row my-40">

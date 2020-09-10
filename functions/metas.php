@@ -4,57 +4,10 @@
 add_action( 'add_meta_boxes', 'add_custom_box' );
 function add_custom_box() {
 	global $post;
-	if($post->post_type === "escuela"){
-        if($post->post_parent == 0){
-            add_meta_box(
-                'escuela_ficha_data_id',            
-                'Ficha general',      
-                'escuela_ficha_inner_custom_box',  
-                 $post->post_type                      
-            );
-            add_meta_box(
-                'escuela_datos_adicionales_ficha_data_id',            
-                'Datos adicionales',      
-                'escuela_datos_adicionales_inner_custom_box',  
-                 $post->post_type                      
-            );
-            add_meta_box(
-                'escuela_contacto_ficha_data_id',            
-                'Contacto',      
-                'escuela_contacto_inner_custom_box',  
-                 $post->post_type                      
-            );
-            add_meta_box(
-                'escuela_galeria_ficha_data_id',            
-                'Galería',      
-                'escuela_galeria_inner_custom_box',  
-                 $post->post_type                      
-            );          
-        }else{
-            add_meta_box(
-                'nivel_datos_adicionales_ficha_data_id',            
-                'Datos adicionales',      
-                'nivel_datos_adicionales_inner_custom_box',  
-                 $post->post_type                      
-            ); 
-            add_meta_box(
-                'nivel_costos_ficha_data_id',            
-                'Costos y Colegiaturas',      
-                'nivel_costos_inner_custom_box',  
-                 $post->post_type                      
-            ); 
-        }
 
-	}
 
 }
 
-/***********************************/
-/****************ESCUELAS*************/
-/***********************************/
-
-require_once ( get_template_directory() . '/functions/metas-bloques/escuela.php' );
-require_once ( get_template_directory() . '/functions/metas-bloques/nivel.php' );
 
 /***********************************/
 /****************END*************/
@@ -62,70 +15,6 @@ require_once ( get_template_directory() . '/functions/metas-bloques/nivel.php' )
 
 function save_postdata( $post_id ) {
 	global $post;
-
-	if($post->post_type === "escuela"){
-        if($post->post_parent == 0){
-            //Ficha
-            basic_input_text_meta_save('escuela_ficha_pub_priv',$post_id);
-            basic_input_text_meta_save('escuela_ficha_costo',$post_id);
-            basic_input_text_meta_save('escuela_ficha_nivel',$post_id,true);
-            basic_input_text_meta_save('escuela_ficha_horarios',$post_id,true);
-            basic_input_text_meta_save('escuela_ficha_horario',$post_id);
-            basic_input_text_meta_save('escuela_ficha_becas',$post_id);
-            basic_input_text_meta_save('escuela_ficha_bilingue',$post_id);
-            basic_input_text_meta_save('escuela_ficha_idiomas',$post_id,true);
-            basic_input_text_meta_save('escuela_ficha_metodo',$post_id);
-            basic_input_text_meta_save('escuela_ficha_ranking_puesto',$post_id);
-            basic_input_text_meta_save('escuela_ficha_ranking_nombre',$post_id);
-            basic_input_text_meta_save('escuela_ficha_ranking_enlace',$post_id);
-            //Datos adicionales
-            basic_input_text_meta_save('escuela_datos_alumnos',$post_id);
-            basic_input_text_meta_save('escuela_datos_alumnos_especiales',$post_id);
-            basic_input_text_meta_save('escuela_datos_religiosa',$post_id);
-            basic_input_text_meta_save('escuela_datos_religiosa_orden',$post_id);
-            basic_input_text_meta_save('escuela_datos_horario_extendido',$post_id);
-            basic_input_text_meta_save('escuela_datos_transporte_escolar',$post_id);
-            basic_input_text_meta_save('escuela_datos_cafeteria',$post_id);
-            basic_input_text_meta_save('escuela_datos_talleres',$post_id);
-            basic_input_text_meta_save('escuela_datos_instalaciones',$post_id);
-            basic_input_text_meta_save('escuela_datos_no_planteles',$post_id);
-            basic_input_text_meta_save('escuela_datos_seguridad',$post_id);
-            //Contacto
-            basic_input_text_meta_save('escuela_contacto_direccion',$post_id);
-            basic_input_text_meta_save('escuela_contacto_web',$post_id);
-            basic_input_text_meta_save('escuela_contacto_telefono',$post_id);
-            basic_input_text_meta_save('escuela_contacto_facebook',$post_id);
-            //Galeria
-            for($i=1;$i<=5;$i++){
-               image_meta_save('escuela_galeria'.$i,'escuela_galeria'.$i.'_file',$post->ID); 
-            }          
-        }else{
-            //Datos adicionales
-            basic_input_text_meta_save('nivel_datos_edades',$post_id);
-            basic_input_text_meta_save('nivel_datos_alumnos',$post_id);
-            basic_input_text_meta_save('nivel_datos_alumnos_especiales',$post_id);
-            basic_input_text_meta_save('nivel_datos_horario_clase',$post_id);
-            basic_input_text_meta_save('nivel_datos_horario_extendido',$post_id);
-            basic_input_text_meta_save('nivel_datos_transporte_escolar',$post_id);
-            basic_input_text_meta_save('nivel_datos_cafeteria',$post_id);
-            basic_input_text_meta_save('nivel_datos_talleres',$post_id);
-            basic_input_text_meta_save('nivel_datos_instalaciones',$post_id);    
-            basic_input_text_meta_save('nivel_datos_seguridad',$post_id); 
-            //Costos y Colegiaturas
-            basic_input_text_meta_save('nivel_costos_inscripcion',$post_id);
-            basic_input_text_meta_save('nivel_costos_colegiatura',$post_id);
-            basic_input_text_meta_save('nivel_costos_materiales',$post_id);
-            basic_input_text_meta_save('nivel_costos_uniformes',$post_id);
-            basic_input_text_meta_save('nivel_costos_alimentos',$post_id);
-            basic_input_text_meta_save('nivel_costos_seguros',$post_id);
-            basic_input_text_meta_save('nivel_costos_anual',$post_id);
-            basic_input_text_meta_save('nivel_costos_becas_desde',$post_id);
-            basic_input_text_meta_save('nivel_costos_becas_hasta',$post_id);
-            basic_input_text_meta_save('nivel_costos_considera',$post_id);
-        }
-
-        
-	}
 
 }
 add_action( 'save_post', 'save_postdata' );

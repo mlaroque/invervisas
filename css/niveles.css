@@ -1,4 +1,0 @@
-.scp-costos table { width: 100%; border: 1px solid #ddd; border-collapse: collapse; margin:30px auto; }
-.scp-costos table tbody tr{ border-bottom: 1px dashed #ddd; }
-.scp-costos table tbody tr:nth-of-type(2n+1) { background: #f2f2f2; }
-.scp-costos td { padding: 10px; }
