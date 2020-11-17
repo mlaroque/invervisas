@@ -1,0 +1,215 @@
+
+#destinos {
+	background: #182848;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+.destinosTop h2 {
+	color: #fff;
+}
+
+.destinosTop p {
+	color: #D7D9FF;
+	margin-bottom: 40px;
+}
+.destinos { 
+    margin-bottom: 1.5em; 
+    position: relative; 
+    border-radius: 4px; 
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+.destinos:hover {
+    border: 3px solid #bfb469
+}
+.destinos-img { 
+    height: 200px; 
+    position: relative; 
+    overflow: hidden; 
+}
+.destinos-img > a > img { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.destinos a{
+    text-decoration: none;
+    color: #07171d;
+}
+
+
+.destinos-title {
+    position: absolute; 
+    bottom: 10px; 
+    left: 0; 
+    z-index: 100; 
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+
+.destinos-title p {
+    word-break: break-word; 
+    margin:0;
+    padding: 6px;
+    font-size: 1.125em;
+    line-height: 1.1em; 
+    font-weight: 300;
+    color: #182848;
+}
+
+
+
+.btn-masdestinos, .btn-masdestinos:visited { 
+	border: 1px solid #fff;
+	color: #fff;
+	margin: 1.5em auto 0 auto;
+	cursor: pointer;
+ }
+
+
+.btn-masdestinos:hover, .btn-masdestinos:focus { 
+	border: 1px solid #fff;
+	color: #182848;
+	background: #fff;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.otrosP, .otrosP:visited { 
+        background: #fff;
+    margin-bottom: 1.5em; 
+    position: relative; 
+}
+.otrosP:focus, .otrosP:hover { 
+        background: #f2f0e1;
+}
+
+.otrosP-img { 
+    height: 144px; 
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 4px 4px 0; 
+}
+.otrosP-img > img { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.otrosP-body {
+    padding: 1.125em;
+}
+.otrosP a{
+    text-decoration: none;
+    color: #07171d;
+}
+.otrosP-title {
+    margin: 0;
+    height: auto;
+    word-break: break-word; 
+ }
+.otrosP-title h2 {
+    word-break: break-word; 
+    margin:0;
+    font-size: 1.125em;
+    line-height: 1.1em; 
+    font-weight: normal;
+    color: #0C0F66  ;
+}
+
+.otrosP-tipoVmin p { 
+    font-size: 0.99em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 0.5em auto;
+    color: #107FC9;
+}
+
+.otrosP-tipoVdesc {
+    min-height: 6.4em;
+}
+.otrosP-tipoVdesc p { 
+    font-size: 0.99em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 0.5em auto;
+    color: rgba(7,23,29,0.8);
+}
+
+
+.otrosP, .otrosP:visited { 
+        background: #fff;
+    margin-bottom: 1.5em; 
+    position: relative; 
+}
+.otrosP:focus, .otrosP:hover { 
+        background: #f2f0e1;
+}
+
+.otrosP-img { 
+    height: 144px; 
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 4px 4px 0; 
+}
+.otrosP-img > img { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.otrosP-body {
+    padding: 1.125em;
+}
+.otrosP a{
+    text-decoration: none;
+    color: #07171d;
+}
+.otrosP-title {
+    margin: 0;
+    height: auto;
+    word-break: break-word; 
+ }
+.otrosP-title h2 {
+    word-break: break-word; 
+    margin:0;
+    font-size: 1.125em;
+    line-height: 1.1em; 
+    font-weight: normal;
+    color: #0C0F66  ;
+}
+
+.otrosP-tipoVmin p { 
+    font-size: 0.99em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 0.5em auto;
+    color: #107FC9;
+}
+
+.otrosP-tipoVdesc {
+    min-height: 6.4em;
+}
+.otrosP-tipoVdesc p { 
+    font-size: 0.99em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 0.5em auto;
+    color: rgba(7,23,29,0.8);
+}

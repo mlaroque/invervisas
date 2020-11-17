@@ -145,6 +145,20 @@ add_action( 'init', 'create_post_type' );
 
 function create_post_type() {  
 
+    register_post_type( 'residencia-por-inv',  
+        array(  
+            'labels' => array(  
+                'name' => __( 'Residencia por inversión' ),  
+                'singular_name' => __( 'Residencia por inversión' )  
+            ),  
+        'public' => true,  
+        'menu_position' => 4,  
+        'hierarchical' => true,  
+        'rewrite'     => array( 'slug' => 'residencia-por-inversion-en' ),
+        'taxonomies' => array( 'category', 'post_tag' ),   
+        'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
+        )  
+    ); 
 
 }
 

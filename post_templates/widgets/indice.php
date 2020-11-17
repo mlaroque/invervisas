@@ -1,7 +1,7 @@
 <?php global $purified_content; global $post;?>
-	<div class="indice-A">
+	<div class="indice shadow">
 		<p><b>Indíce</b></p>
-			 <ol class="list-group list-group-indice-A">
+		<ul>
 			<?php 
 				preg_match_all('/<h2(.*?)>(.*?)<\/h2/s', $post->post_content, $matches_global, PREG_PATTERN_ORDER); 
 				 foreach($matches_global[2] as $match):
@@ -12,13 +12,13 @@
 
 
 			?>
-				<li class="list-group-item"><a href="#<?php echo $id_text; ?>"><?php echo $match; ?></a></li>
+				<li><a href="#<?php echo $id_text; ?>"><?php echo $match; ?></a></li>
 			<?php endforeach; ?>
 			<?php if($post->post_type == "escuela"): ?>
-				<li class="list-group-item"><a href="#contacto">Contacto</a></li>
+				<li><a href="#contacto">Contacto</a></li>
 			<?php endif;?>
 
-			</ol>
+			</ul>
    	</div>
  <?php 
 

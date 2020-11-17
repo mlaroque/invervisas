@@ -20,6 +20,19 @@
 
 
 <div class="container">
+  <div class="row WotrosP">
+    <?php
+
+      if($post->ID == 75){
+        get_template_part("listados/destinos");
+      }
+
+    ?>
+  </div>
+</div>
+ 
+
+<div class="container">
   <div class="row my-40">
     <div class="col-12">
     <?php the_content(); ?> 

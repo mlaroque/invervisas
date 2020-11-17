@@ -22,60 +22,57 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/elements.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/indice.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/escuela.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fuentes.css">
+<!--    
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/alerts.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/widgets.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/comments.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/galeria.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/niveles.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact-form.css">
+-->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/widgets.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/relacionados.css">
 <?php if(is_front_page()):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/portada.css">
-<?php elseif($post->ID === 1398):?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/listado-guias.css">
+<?php elseif($post->post_type === "residencia-por-inv"):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/indice.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ficha_visado.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/comments.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact-form.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/accordion.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/destinosV2.css">
+
+<?php elseif($post->ID === 66):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact-form.css">
+<?php elseif($post->ID === 75):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/destinos.css">
+<?php elseif($post->ID === 123):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ninja-form.css">
 <?php endif; ?>
+
     <!-- Google Tag Manager -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PKGJVTM');
-    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3GXQV9');</script>
     <!-- End Google Tag Manager -->
     <?php wp_head(); ?>
 
 <body <?php body_class(); ?>>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKGJVTM" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3GXQV9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+ 
+ <div class="contactanosBox">
+    <a class="btn btn-contactanos shadow" href="https://invervisas.com/contacto/">
+        <table><tr><td><img src="<?php echo get_template_directory_uri() . '/images/contact.svg'; ?>" alt="Contáctanos para más información" /></td>
+            <td valign="middle">Contacta un Asesor</td></tr></table></a>
+</div>
 
-
-		<?php 
-			if($post->post_type == 'escuela'): 
-				get_template_part('post_templates/widgets/markups/school');
-			endif; 
-		?>
 
     <header>
-        <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img class="logo" src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>"
-                        alt="<?php bloginfo( 'name' ); ?>" />
+                    <img class="logo" src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="<?php bloginfo( 'name' ); ?>" />
                 </a>
 
                 <div class="navbar-toggler hamburger_wrapper">
@@ -108,8 +105,4 @@
 
     }
     </script>
-
-    <button style="display: none" class="scroll-to-top">
-        <div class="btnUp"><img src="<?php echo get_template_directory_uri() . '/images/arrowTop.svg'; ?>" alt="TOP" />
-        </div>
-    </button>
+ 

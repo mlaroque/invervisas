@@ -1,0 +1,37 @@
+#HPparallax {
+    background-size: cover !important;
+    padding-top: 9em;
+    padding-bottom: 9em;
+    background-attachment: fixed !important;
+    margin-bottom: 0;
+    box-shadow: inset 0px 0 300px #000;
+}
+#HPparallax h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 8px #000;
+}
+.ficha_temp { background: #182848; padding: 1rem; border-radius: 4px; }
+.ficha_temp h2 { color: #fff; margin-bottom: 20px; border-bottom: 1px dashed #9ca0b1; font-size: 1.2rem; text-transform: uppercase; }
+.ficha_temp p { color: #fff; }
+
+.ficha_perm { background: #bfb56a; padding: 1rem; border-radius: 4px; }
+.ficha_perm h2 { color: #fff; margin-bottom: 20px; border-bottom: 1px dashed #e8e1c2; font-size: 1.2rem; text-transform: uppercase; }
+.ficha_perm p { color: #fff; }
+
+.ficha_ciud { background: #182848; padding: 1rem; border-radius: 4px; }
+.ficha_ciud h2 { color: #fff; margin-bottom: 20px; border-bottom: 1px dashed #9ca0b1;  font-size: 1.2rem; text-transform: uppercase;}
+.ficha_ciud p { color: #fff; }
+
+.ficha_temp .text, .ficha_perm .text, .ficha_ciud .text { font-size: 2.3rem; font-weight: 400; margin-bottom: 20px; line-height: normal; }
+.ficha_temp .btn, .ficha_perm .btn, .ficha_ciud .btn { margin: 10px auto; width: 100% }
+.ficha_temp p, .ficha_perm p, .ficha_ciud p { margin: 0 auto; line-height: normal; }
+
+.ficha_box {padding-left: 10px; padding-right: 10px; margin-bottom: 2rem; }	
+
+
+.btn-ficha-perm, .btn-ficha-perm:visited { background: #182848; border-color: #182848; color: #fff; }
+.btn-ficha-perm:hover, .btn-ficha-perm:focus { background: #434d6b; border-color: #434d6b; color: #fff; }
+
+.btn-ficha-temp, .btn-ficha-temp:visited, .btn-ficha-ciud, .btn-ficha-ciud:visited { background: #bfb56a; border-color: #bfb56a; color: #fff; }
+.btn-ficha-temp:hover, .btn-ficha-temp:focus,.btn-ficha-ciud:hover, .btn-ficha-ciud:focus { background: #cec487; border-color: #cec487; color: #fff; }

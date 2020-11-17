@@ -29,5 +29,40 @@ function contact_form ($content){
 	return $content;
 }
 
+add_shortcode('accordion', 'accordion');
+
+function accordion ($atts, $content = null){
+	static $no_calls = 0;
+  	++$no_calls;
+
+	preg_match_all("/<h3(.*)>(.*)<\/h3>(.*)/s",$content,$matches,PREG_PATTERN_ORDER);
+	$GLOBALS["accordion_btn_text"] = $matches[2][0];
+	$GLOBALS["accordion_content"] = $matches[3][0];	
+	$GLOBALS["accordion_id"] = "acc_id_" . $no_calls;
+
+	ob_start();
+	get_template_part("post_templates/widgets/accordion");
+	return do_shortcode(ob_get_clean());
+}
+
+add_shortcode('boton_descarga', 'boton_descarga');
+
+function boton_descarga ($atts, $content = null){
+
+	$a = shortcode_atts( array(
+		'id' => '',
+		'color' => 'Blu',
+		'texto' => ''
+	), $atts );
+
+	$GLOBALS["id"] = $a['id'];
+	$GLOBALS["btn_color"] = $a['color'];
+	$GLOBALS["texto"] = $a['texto'];
+
+	ob_start();
+	get_template_part("post_templates/residencia-por-inv/boton-descarga");
+	return ob_get_clean();
+}
+
 
 ?>

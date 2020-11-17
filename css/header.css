@@ -1,6 +1,6 @@
 /**HEADER B CSS**/
 header {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 .navbar {
   position: relative;
@@ -74,12 +74,12 @@ header {
 }
 
 .logo { 
-    width: 240px;
+    width: 190px;
     margin: 0; 
 }
 @media (min-width: 576px) {
   .logo { 
-    width: 230px; 
+    width: 200px; 
   }
 }
 .navbar {
@@ -94,19 +94,23 @@ header {
 
 #menu-main li a, 
 #menu-main li a:visited { 
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
     background: #fff;
-    padding: 12px;
+    padding: 0.6em;
     color: #626874;
-    margin:0;
+    margin: 0;
     cursor: pointer;
     float: left;
+    font-size: 1.1em;
 }
 
 #menu-main li a:hover, 
 #menu-main li a:focus { 
-    background: #ed6a4b;
+    border-top: 3px solid #182848;
+    border-bottom: 3px solid #182848;
     text-decoration: none;
-    color: #fff;
+    color: #0B108C;
 }
 .hamburger_wrapper {
     padding: 5px;
@@ -114,8 +118,8 @@ header {
 }
 
 #lc_hamburger {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     position: relative;
     cursor: pointer;
     outline: none;
@@ -126,7 +130,7 @@ header {
     position: absolute;
     height: 4px;
     width: 100%;
-    background: violet;
+    background: #424d6b;
     border-radius: 4px;
     opacity: 1;
     left: 0;
@@ -151,7 +155,7 @@ header {
 
 #lc_hamburger.close span:nth-child(1) {
     transform: rotate(45deg);
-    background: purple
+    background: #bfb46a
 }
 
 #lc_hamburger.close span:nth-child(2) {
@@ -162,12 +166,12 @@ header {
 
 #lc_hamburger.close span:nth-child(3) {
     transform: rotate(-45deg);
-    background: purple
+    background: #bfb46a;
 }
 
 #lc_nav-menu {
     position: absolute; 
-    top:69px; 
+    top:50px; 
     width: 100%;
     left: 0;
     transform: translateX(-100vw);
@@ -180,7 +184,7 @@ header {
     transform: translateX(0);
     transition: transform .5s ease, opacity ease .2s;
     opacity: 1;
-    background-color: #f4f6f8;
+    color: #0B108C;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     border: 1px solid #dee2e6 !important;
 }
@@ -226,6 +230,7 @@ header {
 
 #lc_nav-menu li { 
     line-height: normal; 
+    margin-bottom: 0;
 }
 
 ul.sub-menu {
@@ -248,7 +253,7 @@ ul.sub-menu {
 
 .sub-menu li a:hover, 
 .sub-menu li a:focus { 
-    color: #ed6a4b;
+    color: #182848;
     text-decoration: none;
 }
 

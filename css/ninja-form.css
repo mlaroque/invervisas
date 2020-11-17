@@ -1,0 +1,72 @@
+.nf-form-content .nf-field-label label {
+	color: #5d5b6d;
+	font-size: 1.2em !important;
+	font-weight: 400 !important;
+	text-align: left;
+	margin: 10px auto 5px 0 !important;
+	letter-spacing: 0.1em;
+}
+
+.checkbox-wrap .nf-field-label label {
+    font-weight: 300 !important;
+}
+
+
+.nf-form-content button, .nf-form-content input[type="button"], .nf-form-content input[type="submit"] {
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    letter-spacing: 2px;
+    color: #fff;
+    background: #424d6b !important;
+    border: 1px solid #424d6b !important;
+}
+.nf-form-content button:hover, .nf-form-content input[type="button"]:hover, .nf-form-content input[type="submit"]:hover {
+	background: #182848 !important;
+	border-color: #182848 !important;
+	color: #fff !important;
+}
+
+#nf-field-16-wrap {
+    text-align: center;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element > div, .nf-form-content input:not([type="button"]), .nf-form-content textarea
+{
+	font-family: 'Josefin Sans';
+	box-shadow: 0 0 0 transparent;
+    border-radius: 4px !important;
+    background-color: #e6e7f1 !important;
+    color: #32373c !important;
+   	width: 100%;
+	margin-bottom: 0 !important;
+	font-weight: 300 !important;
+	font-size: 1.2rem !important;
+}
+.nf-form-content .list-select-wrap .nf-field-element > div:focus, .nf-form-content input:not([type="button"]):focus, .nf-form-content textarea:focus {
+	font-family: 'Josefin Sans' !important;
+	box-shadow: 0 0 11px rgba(33,33,33,.2) !important; 
+	color: #424d6b !important;
+	background: #f3efdf !important;
+	outline: none !important;
+	border:none !important;
+}
+
+.nf-field-container.checkbox-container {
+    width: 90% !important;
+    float: right;
+}

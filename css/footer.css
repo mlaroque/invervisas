@@ -7,22 +7,13 @@ footer {
 footer h3 { 
 	text-transform: uppercase; 
 	letter-spacing: 0.3em;
-	font-weight: normal;
-}
-footer ul {
-	margin-top: 35px;
+	font-weight: 300;
 } 
 footer li { 
 	list-style-type: none;
 	margin-bottom: 25px;
  }
-footer li a, footer li a:visited {
-	color: #333030; 
-}
-footer li a:hover, footer li a:focus {  
-	color: #ed6a4b; 
-	text-decoration: none; 
-}
+
 footer hr { 
 	background: #ddd; 
 }
@@ -37,15 +28,15 @@ footer hr {
 	padding: 0; 
 	}
 .foot li { 
-	padding: 0; 
-	margin: 0; 
-	font-size: 12px; 
-	color: #7d7b8d; 
-	font-weight: normal; 
-	line-height: normal; 
-	list-style-type: none; 
-	display: inline; 
-	width: 24%; 
+	padding: 0;
+	margin: 0.5em 0;
+	font-size: 1em;
+	color: #7d7b8d;
+	font-weight: 300;
+	line-height: normal;
+	list-style-type: none;
+	width: 100%;
+	float: left;
 	}
 .foot li:after { 
 	content: ","; 
@@ -53,9 +44,20 @@ footer hr {
 .foot li:last-child:after { 
 	content: " "; 
 	}
-.foot li a { 
-	padding: 8px 0;
-	margin:5px 0; 
+.foot li a, .foot li a:visited { 
+	padding: 0;
+	margin: 0.5em 0;
+	font-size: 1.1em;
+	color: #7d7b8d;
+	font-weight: 300;
+	line-height: normal;
+	list-style-type: none;
+	width: 100%;
+	float: left;
+	}
+.foot li a:hover, .foot li a:focus { 
+	color: #bfb56a;
+	text-decoration: none;
 	}
 
 .foot h2, 
@@ -65,13 +67,16 @@ footer hr {
 .footDx h2 { 
 	text-transform: uppercase; 
 	letter-spacing: 0.3em;
-	color: #6d6b7d;
 	font-size: 1em;
-	font-weight: normal; 
+	font-weight: 300; 
 	margin-top: 30px; 
-	text-align: center; 
+	text-align: left; 
+	color: #bfb56a;
 	}
-
+.foot p {
+	font-size: 1.1em;
+	line-height: 2.2em;
+}
 .footSx h2 { 
 	text-align: left;
 	}
@@ -102,7 +107,7 @@ footer hr {
 .footSx li a:focus,
 .footDx li a:hover,
 .footDx li a:focus {
-	color: #ed6a4b;
+	color: #bfb56a;
 	text-decoration: none;
 	}
 
@@ -126,8 +131,11 @@ footer hr {
 	padding: 10px 0; 
 	margin:4px;
 	}
-.footHori ul li,
 .foot li {
+	display: block;
+}
+.footHori ul li,
+{
 	display: inline-flex;
 	}
 }
@@ -141,10 +149,9 @@ footer hr {
 	color: #333030; 
 }
 .copy a:hover, .copy a:focus { 
-	color: #333030; 
+	color: #bfb56a; 
 }
 .footHori { 
-	background: #f3f3f3; 
 	margin: 30px 0; 
 }
 .footHori a, .footHori a:visited { 
@@ -155,10 +162,7 @@ footer hr {
 	margin: 30px 0; 
 	font-size: 14px;
 	}
-.footHori .col-12 {
-    	border-top: 1px solid #ddd;
-    	border-bottom: 1px solid #ddd;
-	}
+
 .footHori ul { 
 	padding: 0;
 	margin:15px auto;
@@ -166,7 +170,7 @@ footer hr {
 
 .footHori a:hover,
 .footHori a:focus { 
-	color: #ed6a4b; 
+	color: #bfb56a; 
 	}
 .footHori li { 
 	margin:5px; 

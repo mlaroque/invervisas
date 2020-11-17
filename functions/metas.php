@@ -1,12 +1,40 @@
 <?php
+
 /***AÑADIMOS LOS BOXES A LOS POST TYPES***/
 
 add_action( 'add_meta_boxes', 'add_custom_box' );
 function add_custom_box() {
 	global $post;
 
+    if($post->post_type === "residencia-por-inv"){
+            add_meta_box(
+                'residencia_inv_ciud_data_id',            
+                'Ficha Ciudadania por Inversión',      
+                'residencia_inv_ciud_inner_custom_box',  
+                 $post->post_type                      
+            );
+            add_meta_box(
+                'residencia_inv_temp_data_id',            
+                'Ficha Residencia Temporal por Inversión',      
+                'residencia_inv_temp_inner_custom_box',  
+                 $post->post_type                      
+            );
+            add_meta_box(
+                'residencia_inv_perm_ficha_data_id',            
+                'Ficha Residencia Permanente por Inversión',      
+                'residencia_inv_perm_inner_custom_box',  
+                 $post->post_type                      
+            );
+
+    }
 
 }
+
+/*********************************************************/
+/****************RESIDENCIA POR INVERSION EN*************/
+/********************************************************/
+
+require_once ( get_template_directory() . '/functions/metas-bloques/residencia-por-inv.php' );
 
 
 /***********************************/
@@ -15,6 +43,33 @@ function add_custom_box() {
 
 function save_postdata( $post_id ) {
 	global $post;
+
+    if($post->post_type === "residencia-por-inv"){
+        //Ciudadania
+        basic_input_text_meta_save('residencia_inv_ciud_visa',$post_id);
+        basic_input_text_meta_save('residencia_inv_ciud_minima',$post_id);
+        //basic_input_text_meta_save('residencia_inv_ciud_condiciones',$post_id);
+        basic_input_text_meta_save('residencia_inv_ciud_duracion_visa',$post_id);
+        basic_input_text_meta_save('residencia_inv_ciud_duracion_tramite',$post_id);
+        basic_input_text_meta_save('residencia_inv_ciud_boton_condiciones',$post_id);
+        basic_input_text_meta_save('residencia_inv_ciud_boton_solicitar',$post_id);
+        //Residencia Temporal
+        basic_input_text_meta_save('residencia_inv_temp_visa',$post_id);
+        basic_input_text_meta_save('residencia_inv_temp_minima',$post_id);
+        //basic_input_text_meta_save('residencia_inv_temp_condiciones',$post_id);
+        basic_input_text_meta_save('residencia_inv_temp_duracion_visa',$post_id);
+        basic_input_text_meta_save('residencia_inv_temp_duracion_tramite',$post_id);
+        basic_input_text_meta_save('residencia_inv_temp_boton_condiciones',$post_id);
+        basic_input_text_meta_save('residencia_inv_temp_boton_solicitar',$post_id);
+        //Residencia permanente
+        basic_input_text_meta_save('residencia_inv_perm_visa',$post_id);
+        basic_input_text_meta_save('residencia_inv_perm_minima',$post_id);
+        //basic_input_text_meta_save('residencia_inv_perm_condiciones',$post_id);
+        basic_input_text_meta_save('residencia_inv_perm_duracion_visa',$post_id);
+        basic_input_text_meta_save('residencia_inv_perm_duracion_tramite',$post_id);
+        basic_input_text_meta_save('residencia_inv_perm_boton_condiciones',$post_id);
+        basic_input_text_meta_save('residencia_inv_perm_boton_solicitar',$post_id);
+    }
 
 }
 add_action( 'save_post', 'save_postdata' );
@@ -105,3 +160,6 @@ function xxxx_add_edit_form_multipart_encoding() {
 
 }
 add_action('post_edit_form_tag', 'xxxx_add_edit_form_multipart_encoding');
+ 
+wp_register_script('wp_metas', get_template_directory_uri() .'/js/wp_metas.js', null, false, true);
+wp_enqueue_script('wp_metas');

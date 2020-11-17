@@ -1,20 +1,42 @@
+.contact_btm { 
+	background: #cecfd7; 
+	padding-top: 2rem; 
+	padding-bottom: 1rem; 
+}
+.contact_btm h2 { 
+	margin: 1rem auto 2rem auto;
+	color: #7f742a;
+	text-align: center;
+	font-weight: 300;
+ }
+.contact_btm .form-group { 
+	margin-bottom: 1rem; 
+}
+.contact_btm .form-check  { 
+	margin-bottom: 1rem; 
+}
+
+
+#contact-form h3 {
+	font-size: 2rem;
+	margin-top: 1rem;
+}
 #contact-form label {
 	color: #5d5b6d; 
-	font-size: 1em;
-	font-weight: bold;
+	font-size: 1.2em;
+	font-weight: 400;
 	text-align: left;
 	margin: 10px auto 5px 0; 
-	display: block; 
 	letter-spacing: 0.1em; 
 }
 #contact-form {
 	font-size: 1em; 
 	width: 100%; 
-	margin-top: 30px;
-	margin-bottom: 15px;
+	margin-top: 1rem;
+	margin-bottom: 5rem;
 }
 ::placeholder { 
-	color: #00b2a7; 
+	color: #424d6b; 
 	opacity: 1; 
 }
 .cf_input { 
@@ -34,27 +56,43 @@
 #contact-form input[type="month"],
 #contact-form input[type="number"],
 #contact-form input[type="text"],
-#contact-form  textarea {
+#contact-form  textarea,
+#contact-form  select,
+#contact-form  option {
+	font-family: 'Josefin Sans';
 	box-shadow: 0 0 0 transparent;
     border-radius: 4px;
-    border: 1px solid #1ad2c7;
-    background-color: rgba(26,210,199,.3);
+    background-color: #e6e7f1;
     color: #32373c;
    	width: 100%;
-   	margin-bottom: 10px;
-   	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 2rem;
+	font-weight: 300;
+	font-size: 1.2rem;
 }
 #contact-form input[type="checkbox"]:focus, 
 #contact-form input[type="email"]:focus, 
 #contact-form input[type="radio"]:focus, 
 #contact-form input[type="tel"]:focus, 
 #contact-form input[type="text"]:focus, 
-#contact-form textarea:focus{ 
+#contact-form textarea:focus,
+#contact-form  textarea:focus,
+#contact-form  select:focus { 
+	font-family: 'Josefin Sans';
 	box-shadow: 0 0 11px rgba(33,33,33,.2); 
-	font-family: 'Montserrat', sans-serif;
-	color: #fff;
-	background: #1ad2c7;
+	color: #424d6b;
+	background: #f3efdf;
+	outline: none;
+	border:none;
 } 
+
+#contact-form .form-check {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#contact-form .form-check-label {
+	font-weight: 300;
+
+}
 .cf_captcha {
 	margin:10px auto;
 }
@@ -62,7 +100,20 @@
 	text-align: center;
 	display: inline-block;
 }
+
+.form-check-inline {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    margin-right: .75rem;
+
+}
+
 .cf_btn, .cf_btn:visited {
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
     display: inline-block;
     font-weight: 700;
     text-transform: uppercase;
@@ -80,10 +131,10 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     letter-spacing: 2px;
     color: #fff;
-    background: #f74e6f;
-    border: 1px solid #f74e6f;
+    background: #424d6b;
+    border: 1px solid #424d6b;
 }
 .cf_btn:hover, .cf_btn:focus {
-	background: #e73e5f;
-	border-color: #e73e5f;
+	background: #182848;
+	border-color: #182848;
 }

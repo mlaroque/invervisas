@@ -1,4 +1,20 @@
 <?php
+
+  if (!function_exists('getDBConnection')) {
+  //Obtener una conexión a base de datos
+  function getDBConnection(){
+
+      try {
+        $conn = new PDO('mysql:host=localhost;dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASSWORD);
+      }
+      catch (PDOException $e) {
+        echo '<p>ERROR: No se conecto a la base de datos..!</p>';
+        exit;
+      }
+  
+      return $conn;
+  }
+  }
 	
 	function get_image_by_value($val,$extension){
 		return get_template_directory_uri() . "/images/" . $val . "." . $extension;
