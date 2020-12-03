@@ -64,5 +64,19 @@ function boton_descarga ($atts, $content = null){
 	return ob_get_clean();
 }
 
+add_shortcode('paises', 'paises');
+function paises ($atts, $content = null){
+	
+	$atts = shortcode_atts(
+        array(
+            'categoria' => '',
+        ), $atts
+	);
+	$GLOBALS['categoria'] = $atts['categoria'];
+	ob_start();
+	get_template_part("post_templates/residencia-por-inv/listado-paises-filtrados");
+	$content = ob_get_clean();
+	return $content;
+}
 
 ?>
