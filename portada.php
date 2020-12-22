@@ -161,7 +161,7 @@
 							<div class="destinos-title">
 								<p><?php echo $post_residencia->post_title; ?></p>
 							</div>
-							<a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>" class="list-item-thumb"><img src="<?php echo get_the_post_thumbnail_url($post_residencia->ID); ?>" />  </a>
+							<a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>" class="list-item-thumb"><img src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" />  </a>
 						</div>
 					</div>
 				</div>
