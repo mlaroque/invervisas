@@ -4,7 +4,7 @@ global $post;
  //Dichiarazione Loop Personalizzato
  $args = array(
     'post_type' => 'residencia-por-inv',
-    'posts_per_page' => -1, 
+    'posts_per_page' => 4, 
     'orderby' => 'menu_order date',
     'order' => 'ASC',
     'category_name' => $categoria,
@@ -12,6 +12,8 @@ global $post;
 );
 
 $posts = get_posts($args);
+
+
 ?>
 
 <div class="container">
