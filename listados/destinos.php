@@ -26,18 +26,12 @@
                 <div class="otrosP shadow">
                 <a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>">
                     <div class="otrosP-img">
-                        <img src="<?php echo get_the_post_thumbnail_url($post_residencia->ID); ?>" alt="Toda la información sobre <?php echo $post_residencia->post_title; ?>" />
+                        <img class="lazy-img" data-src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" alt="Toda la información sobre <?php echo $post_residencia->post_title; ?>" />
                     </div>
                     <div class="otrosP-body">
                         <div class="otrosP-title">
                             <h2><?php echo $post_residencia->post_title; ?></h2>
                         </div>
-                        <!--<div class="otrosP-tipoVmin">
-                            <p>Inversión mínima: <br><b>500,000 euros + Costes</b></p>
-                        </div>
-                        <div class="otrosP-tipoVdesc">
-                            <p>Tipo de visado: <br><b>Inmobiliaria, Residencia, Zona Schengen</b></p>
-                        </div>-->
                     </div>
                 </a>
                 </div>

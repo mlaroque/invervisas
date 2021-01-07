@@ -1,7 +1,7 @@
 .txtBig h2 { margin: 30px auto; font-size: 2.6rem; color: #444a62; }
 .txtBig p { font-size: 1.5rem; }
 
-.HPparallax { background: #192848 url(../images/hpbg.jpg); background-size: cover; background-position: center; }
+.HPparallax { background: #192848 url(../images/hpbgXs.jpg); background-size: cover; background-position: center; }
 #HPparallax {
     background-size: cover !important;
     padding-top: 0;
@@ -265,7 +265,8 @@ a.btn-card {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 576px) { 
+.HPparallax { background: #192848 url(../images/hpbg.jpg); background-size: cover; background-position: center; }
 
 }
 

@@ -48,8 +48,7 @@ $posts = get_posts($args);
             <div class="otrosP shadow">
                 <a href="<?php echo get_permalink($articulo->ID);?>">
                     <div class="otrosP-img">
-                        <img alt="<?php echo $articulo->post_title;?>"
-                            src="<?php echo get_the_post_thumbnail_url($articulo->ID, 'medium');?>">
+                        <img class="lazy-img" alt="<?php echo $articulo->post_title;?>" data-src="<?php echo get_the_post_thumbnail_url($articulo->ID, 'medium');?>">
                     </div>
                     <div class="otrosP-body">
                         <div class="otrosP-title">

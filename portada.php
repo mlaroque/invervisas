@@ -68,7 +68,7 @@
             <div class="col-md-4">
                 <div class="card-content shadow">
                     <div class="card-img">
-						<img src="<?php echo get_template_directory_uri() . '/images/residencia.svg'; ?>" />  
+						<img class="js-lazy-image" src="<?php echo get_template_directory_uri() . '/images/residencia.svg'; ?>" />  
                     </div>
                     <div class="card-desc">
                         <h2>Residencia <br/>por Inversión</h2>
@@ -82,7 +82,7 @@
             <div class="col-md-4">
                 <div class="card-content shadow">
                     <div class="card-img">
-						<img src="<?php echo get_template_directory_uri() . '/images/ciudadania.svg'; ?>" />  
+						<img class="js-lazy-image" src="<?php echo get_template_directory_uri() . '/images/ciudadania.svg'; ?>" />  
                     </div>
                     <div class="card-desc">
                         <h2>Residencia Permanente <br/>por Inversión</h2>
@@ -96,7 +96,7 @@
             <div class="col-md-4">
                 <div class="card-content shadow">
                     <div class="card-img">
-						<img src="<?php echo get_template_directory_uri() . '/images/nacionalidad.svg'; ?>" />  
+						<img class="js-lazy-image" src="<?php echo get_template_directory_uri() . '/images/nacionalidad.svg'; ?>" />  
                     </div>
                     <div class="card-desc">
                         <h2>Ciudadanía <br/>por Inversión</h2>
@@ -161,7 +161,7 @@
 							<div class="destinos-title">
 								<p><?php echo $post_residencia->post_title; ?></p>
 							</div>
-							<a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>" class="list-item-thumb"><img src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" />  </a>
+							<a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>" class="list-item-thumb"><img  class="js-lazy-image" src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" />  </a>
 						</div>
 					</div>
 				</div>

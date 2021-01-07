@@ -13,8 +13,59 @@ global $purified_content;
 $posts = get_posts($args);
 
 ?>
-<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+ 
+ <style>
+.HPparallax {
+    background-size: cover !important;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-attachment: fixed !important;
+    margin-bottom: 0;
+    box-shadow: inset 0px 0 300px #000;
+}
+
+          .HPparallax{
+            /* dynamic img url */
+            background: url(<?php echo get_the_post_thumbnail_url($articulo->ID, 'medium');?>);
+
+          
+            }
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) { 
+    .HPparallax {
+    background-size: cover !important;
+    padding-top: 9em;
+    padding-bottom: 9em;
+    background-attachment: fixed !important;
+    margin-bottom: 0;
+    box-shadow: inset 0px 0 300px #000;
+}
+.HPparallax{
+            /* dynamic img url */
+            background: url(<?php echo get_the_post_thumbnail_url($articulo->ID, 'full');?>);
+}
+          </style>
+
+
+<!--
+<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );?>
 <section id="HPparallax" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat;">
+    <div class="container-fluid HPparallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 HPparallax_mid text-center">
+                    <h1><?php echo $post->post_title; ?></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+ <section id="HPparallax">
     <div class="container-fluid HPparallax">
         <div class="container">
             <div class="row">
@@ -94,9 +145,7 @@ $posts = get_posts($args);
                             <div class="destinos-title">
                                 <p><?php echo $post_residencia->post_title; ?></p>
                             </div>
-                            <a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>"
-                                class="list-item-thumb"><img
-                                    src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" /> </a>
+                            <a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>" class="list-item-thumb"><img class="lazy-img" data-src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" /> </a>
                         </div>
                     </div>
                 </div>

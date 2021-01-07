@@ -32,7 +32,7 @@ $posttype_obj = get_post_type_labels( get_post_type_object($post->post_type) );
 	                <?php if($listado_post):?><a class="tdn"
 	                    href="<?php echo get_permalink($current_post->ID);?>"><?php endif;?>
 	                    <div class="relacionados-logo">
-	                        <img class="js-lazy-image" src="<?php echo get_the_post_thumbnail_url($current_post->ID, 'medium');?>">
+	                        <img src="<?php echo get_the_post_thumbnail_url($current_post->ID, 'medium');?>">
 	                    </div>
 
 

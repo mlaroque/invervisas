@@ -22,12 +22,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/elements.css">
-<!--    
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/alerts.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/galeria.css">
--->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/widgets.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/relacionados.css">
 <?php if(is_front_page()):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/portada.css">
 <?php elseif($post->post_type === "residencia-por-inv"):?>
@@ -61,10 +56,17 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
  
+ <!--
+ <div class="descarganosBox">
+    <a class="btn btn-descarganos shadow" href="https://invervisas.com/contacto/">
+        <table><tr><td><img src="<?php echo get_template_directory_uri() . '/images/download.svg'; ?>" alt="Descarga el PDF con toda la información" /></td>
+            <td valign="middle">Descargar PDF</td></tr></table></a>
+</div>
+-->
  <div class="contactanosBox">
     <a class="btn btn-contactanos shadow" href="https://invervisas.com/contacto/">
         <table><tr><td><img src="<?php echo get_template_directory_uri() . '/images/contact.svg'; ?>" alt="Contáctanos para más información" /></td>
-            <td valign="middle">Contacta un Asesor</td></tr></table></a>
+            <td valign="middle">Contacto</td></tr></table></a>
 </div>
 
 

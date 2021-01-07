@@ -35,17 +35,3 @@
 
 .btn-ficha-temp, .btn-ficha-temp:visited, .btn-ficha-ciud, .btn-ficha-ciud:visited { background: #bfb56a; border-color: #bfb56a; color: #fff; }
 .btn-ficha-temp:hover, .btn-ficha-temp:focus,.btn-ficha-ciud:hover, .btn-ficha-ciud:focus { background: #cec487; border-color: #cec487; color: #fff; }
-
-
-.descarganosBox { position: fixed; width: 55%; bottom: 10px; left: 5%; z-index: 999;  }
-.descarganosBox img { width: 27px; margin-right: 5px; }
-
-.btn-descarganos, .btn-descarganos:visited { background: #c91056; color: #fff; padding: 5px }
-.btn-descarganos:hover, .btn-descarganos:focus { background: #ad0e4a; border: 1px solid #ad0e4a; color: #fff; text-decoration: none; }
-
-@media (min-width: 576px) {
-.descarganosBox { position: fixed; bottom: 40px; right: 200px; left: auto; z-index: 999; width: auto; }
-
-.descarganosBox img { width: 30px; margin-right: 9px; }
-.btn-descarganos, .btn-descarganos:visited { width: auto; font-size: 1.3em; }
-}
