@@ -6,8 +6,8 @@
       $info_post_title = $post->post_title;
     }
 
-    wp_register_script('g-recaptcha', 'https://www.google.com/recaptcha/api.js', '', false, true );
-    wp_enqueue_script('g-recaptcha');
+    //wp_register_script('g-recaptcha', 'https://www.google.com/recaptcha/api.js', '', false, true );
+    //wp_enqueue_script('g-recaptcha');
 
     wp_register_script('contact-form', get_template_directory_uri() .  '/js/contact-form.js', '', false, true );
     wp_enqueue_script('contact-form');
@@ -175,13 +175,13 @@
       <input type="hidden" name="descarga_id" value="<?php echo $descarga_id;?>">
       <input type="hidden" name="info_post_title" value="<?php echo $info_post_title;?>">
 
-      <div class="row">
+      <!-- <div class="row">
           <div class="col-12 col-sm-12">
             <div class="form-group cf_captcha text-center">
             <div class="g-recaptcha" data-sitekey="6LfSxc8ZAAAAAAeQsItf-9WVyPxhWfTx-sMZ8iZL"></div>
             </div>
           </div>
-      </div>
+      </div> -->
 
       <div class="row">
         <div class="col-12">
