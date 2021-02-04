@@ -164,7 +164,7 @@ function create_post_type() {
         'hierarchical' => true,  
         'rewrite'     => array( 'slug' => 'residencia-por-inversion-en' ),
         'taxonomies' => array( 'category', 'post_tag' ),   
-        'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes')
+        'supports' => array( 'title', 'editor', 'author', 'comments', 'thumbnail', 'excerpt', 'page-attributes','revisions')
         )  
     ); 
 
