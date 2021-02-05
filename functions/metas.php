@@ -7,6 +7,12 @@ function add_custom_box() {
 	global $post;
 
     if($post->post_type === "residencia-por-inv"){
+        add_meta_box(
+            'residencia_mas_info_data_id',            
+            'Más información',      
+            'residencia_mas_info_inner_custom_box',  
+             $post->post_type                      
+        );
             add_meta_box(
                 'residencia_inv_ciud_data_id',            
                 'Ficha Ciudadania por Inversión',      
@@ -15,7 +21,7 @@ function add_custom_box() {
             );
             add_meta_box(
                 'residencia_inv_temp_data_id',            
-                'Ficha Residencia Temporal por Inversión',      
+                'Visa de Inversión',      
                 'residencia_inv_temp_inner_custom_box',  
                  $post->post_type                      
             );
@@ -69,6 +75,8 @@ function save_postdata( $post_id ) {
         basic_input_text_meta_save('residencia_inv_perm_duracion_tramite',$post_id);
         basic_input_text_meta_save('residencia_inv_perm_boton_condiciones',$post_id);
         basic_input_text_meta_save('residencia_inv_perm_boton_solicitar',$post_id);
+        basic_input_text_meta_save('residencia_mas_info_espanol',$post_id);
+        basic_input_text_meta_save('residencia_mas_info_ingles',$post_id);
     }
 
 }
