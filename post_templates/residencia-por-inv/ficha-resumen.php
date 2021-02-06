@@ -15,17 +15,17 @@
                  <p class="text"><?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_minima', true ); ?></p>
                 <p>Validez</p>  
                  <p class="text"><?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_duracion_visa', true ); ?></p> 
-                <p>Duración del Trámite</p> 
                 
-                <!--  NUEVOS CAMPOS DE MAS INFO
+               
                 <?php if($mas_info_es):?>
                     <p><?php echo $mas_info_es;?></p>
                 <?php endif;?>
                 
                 <?php if($mas_info_en):?>
                     <p><?php echo $mas_info_en;?></p>
-                <?php endif;?> -->
+                <?php endif;?> 
 
+                <p>Duración del Trámite</p> 
                  <p class="text"><?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_duracion_tramite', true ); ?></p>
                 <a target="_blank" class="btn btn-ficha-<?php echo $tipo_visa;?>" href="<?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_boton_condiciones', true ). '&pi=' . $post->post_title  . '&min=y'; ?>">Descargar Condiciones <small>(PDF)</small></a>
                 <a class="btn btn-ficha-<?php echo $tipo_visa;?>" href="<?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_boton_solicitar', true ). '?pi=' . $post->post_title; ?>">Solicitar más información</a>

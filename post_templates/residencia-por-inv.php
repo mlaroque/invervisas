@@ -13,8 +13,8 @@ global $purified_content;
 $posts = get_posts($args);
 
 ?>
- 
- <style>
+
+<style>
 .HPparallax {
     background-size: cover !important;
     padding-top: 1em;
@@ -24,30 +24,34 @@ $posts = get_posts($args);
     box-shadow: inset 0px 0 300px #000;
 }
 
-          .HPparallax{
-            /* dynamic img url */
-            background: url(<?php echo get_the_post_thumbnail_url($articulo->ID, 'medium');?>);
+.HPparallax {
+    /* dynamic img url */
+    background: url(<?php echo get_the_post_thumbnail_url($articulo->ID, 'medium');
+    ?>);
 
-          
-            }
+
+}
 
 
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     .HPparallax {
-    background-size: cover !important;
-    padding-top: 9em;
-    padding-bottom: 9em;
-    background-attachment: fixed !important;
-    margin-bottom: 0;
-    box-shadow: inset 0px 0 300px #000;
+        background-size: cover !important;
+        padding-top: 9em;
+        padding-bottom: 9em;
+        background-attachment: fixed !important;
+        margin-bottom: 0;
+        box-shadow: inset 0px 0 300px #000;
+    }
+
+    .HPparallax {
+        /* dynamic img url */
+        background: url(<?php echo get_the_post_thumbnail_url($articulo->ID, 'full');
+        ?>);
+    }
 }
-.HPparallax{
-            /* dynamic img url */
-            background: url(<?php echo get_the_post_thumbnail_url($articulo->ID, 'full');?>);
-}
-          </style>
+</style>
 
 
 <!--
@@ -65,7 +69,7 @@ $posts = get_posts($args);
 </section>
 -->
 
- <section id="HPparallax">
+<section id="HPparallax">
     <div class="container-fluid HPparallax">
         <div class="container">
             <div class="row">
@@ -91,7 +95,7 @@ $posts = get_posts($args);
 <div class="container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <?php $fichas = array(array("temp","Residencia temporal","oro"),array("perm","Residencia permanente","oro"),array("ciud","Ciudadania","Blu"));
+            <?php $fichas = array(array("temp","Visa de Inversión","oro"),array("perm","Residencia permanente","oro"),array("ciud","Ciudadania","Blu"));
                 foreach($fichas as $ficha):?>
             <?php $GLOBALS["tipo_visa"] = $ficha[0]; $GLOBALS["titulo_ficha"] = $ficha[1]; $GLOBALS["color_ficha"] = $ficha[2];?>
             <?php get_template_part("post_templates/residencia-por-inv/ficha-resumen"); ?>
@@ -145,7 +149,10 @@ $posts = get_posts($args);
                             <div class="destinos-title">
                                 <p><?php echo $post_residencia->post_title; ?></p>
                             </div>
-                            <a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>" class="list-item-thumb"><img class="lazy-img" data-src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" /> </a>
+                            <a href="<?php echo esc_url( get_permalink($post_residencia->ID)); ?>"
+                                class="list-item-thumb"><img class="lazy-img"
+                                    data-src="<?php echo get_the_post_thumbnail_url($post_residencia->ID, 'medium'); ?>" />
+                            </a>
                         </div>
                     </div>
                 </div>
