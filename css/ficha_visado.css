@@ -49,3 +49,7 @@
 .descarganosBox img { width: 30px; margin-right: 9px; }
 .btn-descarganos, .btn-descarganos:visited { width: auto; font-size: 1.3em; }
 }
+
+.subTop { border-top: 1px dashed #9ca0b1; margin-top: 17px; padding-top: 13px; text-align: left; }
+.subTop p { margin-bottom: 10px; }
+.subTBtm { border-bottom: 1px dashed #9ca0b1; margin-bottom: 17px; padding-bottom: 13px; text-align: left; }
