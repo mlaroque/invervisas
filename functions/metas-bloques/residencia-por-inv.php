@@ -3,8 +3,8 @@
 $options_si_no = array(array("Si","Si"),array("No","No"));
 
 function residencia_mas_info_inner_custom_box($post){
-	echo build_input_text("residencia_mas_info_espanol","Más información en español:","",""); 
-	echo build_input_text("residencia_mas_info_ingles","Más información en inglés:","",""); 
+	echo build_input_text("residencia_mas_info_espanol","Más información 1:","",""); 
+	echo build_input_text("residencia_mas_info_ingles","Más información 2:","",""); 
 }
 
 function residencia_inv_ciud_inner_custom_box( $post ){

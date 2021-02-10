@@ -21,7 +21,7 @@ function add_custom_box() {
             );
             add_meta_box(
                 'residencia_inv_temp_data_id',            
-                'Visa de Inversión',      
+                'Ficha de visa residencia tempora',      
                 'residencia_inv_temp_inner_custom_box',  
                  $post->post_type                      
             );
