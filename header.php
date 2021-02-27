@@ -39,6 +39,9 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/destinos.css">
 <?php elseif($post->ID === 123):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ninja-form.css">
+    
+<?php elseif($post->ID === 341):?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/destinosV2.css">
 <?php endif; ?>
 
     <!-- Google Tag Manager -->

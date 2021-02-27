@@ -168,6 +168,8 @@ function xxxx_add_edit_form_multipart_encoding() {
 
 }
 add_action('post_edit_form_tag', 'xxxx_add_edit_form_multipart_encoding');
- 
-wp_register_script('wp_metas', get_template_directory_uri() .'/js/wp_metas.js', null, false, true);
-wp_enqueue_script('wp_metas');
+
+if(is_user_logged_in()){ //solo se importa cuando se trabaja en las metas. TIENE QUE ESTAR LOGGEADO
+    wp_register_script('wp_metas', get_template_directory_uri() .'/js/wp_metas.js', null, false, true);
+    wp_enqueue_script('wp_metas');
+}
