@@ -40,7 +40,7 @@
 <?php elseif($post->ID === 123):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ninja-form.css">
     
-<?php elseif($post->ID === 341):?>
+<?php elseif($post->ID === 341 || $post->ID === 333):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/destinosV2.css">
 <?php endif; ?>
 
