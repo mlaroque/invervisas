@@ -54,6 +54,8 @@ footer hr {
 	list-style-type: none;
 	width: 100%;
 	float: left;
+	text-decoration: none;
+	font-weight: normal;
 	}
 .foot li a:hover, .foot li a:focus { 
 	color: #bfb56a;
@@ -102,6 +104,8 @@ footer hr {
 	font-size: 14px; 
 	padding: 2px 0; 
 	margin:2px;
+	text-decoration: none;
+	font-weight: normal;
 	}
 .footSx li a:hover,
 .footSx li a:focus,
@@ -130,6 +134,8 @@ footer hr {
 .footDx li a:visited { 
 	padding: 10px 0; 
 	margin:4px;
+	text-decoration: none;
+	font-weight: normal;
 	}
 .foot li {
 	display: block;
@@ -147,6 +153,8 @@ footer hr {
 }
 .copy a, .copy a:visited { 
 	color: #333030; 
+	text-decoration: none;
+	font-weight: normal;
 }
 .copy a:hover, .copy a:focus { 
 	color: #bfb56a; 
@@ -156,6 +164,8 @@ footer hr {
 }
 .footHori a, .footHori a:visited { 
 	color: #707070;
+	text-decoration: none;
+	font-weight: normal;
 }
 .copy p { 
 	color: #7d7b8d; 
