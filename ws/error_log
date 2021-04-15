@@ -94,3 +94,5 @@ WHEN `type` = 8 THEN `IP`
 ELSE 9999
 END AS `detailSort`
  FROM `wp_wfblocks7` WHERE `type` IN (7) AND (`expiration` = 0 OR `expiration` > UNIX_TIMESTAMP()) ORDER BY `typeSort` ASC, `id` DESC realizada por wfWAFIPBlocksController::synchronizeConfigSettings, wfBlock::lockouts, wfBlock::allBlocks
+[14-Apr-2021 02:44:26 UTC] PHP Warning:  Declaration of LCMN_Walker::start_lvl(&$output, $item, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/functions/utils.php on line 0
+[14-Apr-2021 19:45:47 UTC] PHP Warning:  Declaration of LCMN_Walker::start_lvl(&$output, $item, $depth) should be compatible with Walker_Nav_Menu::start_lvl(&$output, $depth = 0, $args = NULL) in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/functions/utils.php on line 0
