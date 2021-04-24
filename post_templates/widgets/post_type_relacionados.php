@@ -32,7 +32,7 @@ $posttype_obj = get_post_type_labels( get_post_type_object($post->post_type) );
 	                <?php if($listado_post):?><a class="tdn"
 	                    href="<?php echo get_permalink($current_post->ID);?>"><?php endif;?>
 	                    <div class="relacionados-logo">
-	                        <img class="js-lazy-image" src="<?php echo get_the_post_thumbnail_url($current_post->ID, 'medium');?>">
+	                        <img class="lazy-img" data-src="<?php echo get_the_post_thumbnail_url($current_post->ID, 'medium');?>">
 	                    </div>
 
 
@@ -66,9 +66,9 @@ $posttype_obj = get_post_type_labels( get_post_type_object($post->post_type) );
 	                                            <span class="quickinfo1Tit">Becas/Ayudas</span>
 	                                            <br>
 	                                            <?php if(get_post_meta( $current_post->ID, 'escuela_ficha_becas', true ) === "Si"):?>
-	                                            <img src="<?php bloginfo('template_url'); ?>/images/si.svg" class="yesNo" />
+	                                            <img data-src="<?php bloginfo('template_url'); ?>/images/si.svg" class="yesNo lazy-img" />
 	                                            <?php else: ?>
-	                                            <img src="<?php bloginfo('template_url'); ?>/images/no.svg" class="yesNo" />
+	                                            <img data-src="<?php bloginfo('template_url'); ?>/images/no.svg" class="yesNo lazy-img" />
 	                                            <?php endif;?>
 	                                        </td>
 	                                        <!--<td class="text-center td33 brdr brdb" valign="top">

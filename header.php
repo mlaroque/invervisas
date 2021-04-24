@@ -68,7 +68,7 @@
 -->
  <div class="contactanosBox">
     <a class="btn btn-contactanos shadow" href="https://invervisas.com/contacto/">
-        <table><tr><td><img src="<?php echo get_template_directory_uri() . '/images/contact.svg'; ?>" alt="Contáctanos para más información" /></td>
+        <table><tr><td><img class="lazy-img" data-src="<?php echo get_template_directory_uri() . '/images/contact.svg'; ?>" alt="Contáctanos para más información" /></td>
             <td valign="middle">Contacto</td></tr></table></a>
 </div>
 
@@ -77,7 +77,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img class="logo" src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="<?php bloginfo( 'name' ); ?>" />
+                    <img class="logo lazy-img" data-src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="<?php bloginfo( 'name' ); ?>" />
                 </a>
 
                 <div class="navbar-toggler hamburger_wrapper">

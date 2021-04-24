@@ -23,14 +23,14 @@
 
                 <?php if($mas_info_es):?>
                     <div class="subTop">
-                        <p> <img src="<?php echo get_template_directory_uri(); ?>/images/tick-w.svg" width="15" />
+                        <p> <img class="lazy-img" data-src="<?php echo get_template_directory_uri(); ?>/images/tick-w.svg" width="15" />
                 <?php echo $mas_info_es;?></p>
                     </div>
                 <?php endif;?>
                 
                 <?php if($mas_info_en):?>
                     <div class="subTBtm">
-                        <p> <img src="<?php echo get_template_directory_uri(); ?>/images/tick-w.svg" width="15" />
+                        <p> <img class="lazy-img" data-src="<?php echo get_template_directory_uri(); ?>/images/tick-w.svg" width="15" />
                 <?php echo $mas_info_en;?></p>
                     </div>
                 <?php endif;?> 
