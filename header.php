@@ -68,8 +68,7 @@
 -->
  <div class="contactanosBox">
     <a class="btn btn-contactanos shadow" href="https://invervisas.com/contacto/">
-        <table><tr><td><img class="lazy-img" data-src="<?php echo get_template_directory_uri() . '/images/contact.svg'; ?>" alt="Contáctanos para más información" /></td>
-            <td valign="middle">Contacto</td></tr></table></a>
+         <img class="float-left" src="<?php echo get_template_directory_uri() . '/images/contact.svg'; ?>" alt="Contáctanos para más información" /> Contacto</a>
 </div>
 
 

@@ -67,6 +67,9 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/lazy-load.js"></script>
 
+<?php if($post->ID === 341 || $post->ID === 333 || $post->ID === 75):?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/tablas-responsive.js"></script>
+<?php endif; ?>
 </div>
 </body>
 </html>
