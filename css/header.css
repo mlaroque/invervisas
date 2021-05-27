@@ -103,13 +103,14 @@ header {
     cursor: pointer;
     float: left;
     font-size: 1.1em;
+    text-decoration: none;
 }
 
 #menu-main li a:hover, 
 #menu-main li a:focus { 
     border-top: 3px solid #182848;
     border-bottom: 3px solid #182848;
-    text-decoration: none;
+    text-decoration: none !important;
     color: #0B108C;
 }
 .hamburger_wrapper {

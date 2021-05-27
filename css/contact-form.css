@@ -110,7 +110,7 @@
     margin-right: .75rem;
 
 }
-
+#contact-form a { color: #107FC9 }
 .cf_btn, .cf_btn:visited {
 	margin-top: 1.4rem;
 	margin-bottom: 1.4rem;

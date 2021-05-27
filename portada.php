@@ -65,7 +65,9 @@
 <section id="HPcatBox">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+        	<div class="col-12 col-sm-12 col-md-2 col-lg-2"></div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                 <div class="card-content shadow">
                     <div class="card-img">
 						<img class="lazy-img" data-src="<?php echo get_template_directory_uri() . '/images/residencia.svg'; ?>" />  
@@ -74,12 +76,12 @@
                         <h2>Residencia <br/>por Inversión</h2>
                         <p>Segunda residencia para viajar y vivir en donde quieres</p>
                     </div>
-                   <!-- <div class="card-btn">
-                    	<a href="#" class="btn-card">Saber Más</a> 
-                    </div>-->
+                   <div class="card-btn">
+                    	<a href="https://invervisas.com/visa-de-inversionista/" class="btn-card">Saber Más</a> 
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
+          <!--  <div class="col-md-4">
                 <div class="card-content shadow">
                     <div class="card-img">
 						<img class="lazy-img" data-src="<?php echo get_template_directory_uri() . '/images/ciudadania.svg'; ?>" />  
@@ -88,12 +90,12 @@
                         <h2>Residencia Permanente <br/>por Inversión</h2>
                         <p>Inicia una nueva vida con tu familia en el país de tu elección</p>
                     </div>
-                    <!-- <div class="card-btn">
+                <div class="card-btn">
                     	<a href="#" class="btn-card">Saber Más</a> 
-                    </div>-->
+                    </div> 
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div>-->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                 <div class="card-content shadow">
                     <div class="card-img">
 						<img class="lazy-img" data-src="<?php echo get_template_directory_uri() . '/images/nacionalidad.svg'; ?>" />  
@@ -102,11 +104,12 @@
                         <h2>Ciudadanía <br/>por Inversión</h2>
                         <p>Obtén la ciudadanía y un segundo pasaporte</p>
                     </div>
-                    <!-- <div class="card-btn">
-                    	<a href="#" class="btn-card">Saber Más</a> 
-                    </div>-->
+                    <div class="card-btn">
+                    	<a href="https://invervisas.com/ciudadania-por-inversion/" class="btn-card">Saber Más</a> 
+                    </div>
                 </div>
             </div>
+            <div class="col-12 col-sm-12 col-md-2 col-lg-2"></div>
         </div>
     </div>
 </section>

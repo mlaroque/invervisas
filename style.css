@@ -116,13 +116,14 @@ small {
   font-size: 80%;
 }
 a {
-  color: #107FC9;
+  color: #ec0054;
   text-decoration: none;
   background-color: transparent;
+  text-decoration: underline;
 }
 
 a:hover {
-  color: #0E4EAD;
+  color: #fc005a;
   text-decoration: underline;
 }
 
@@ -146,6 +147,7 @@ a:hover {
 }
 
 .breadcrumb { background: white;  padding: 0 1rem; margin: 0; }
+.breadcrumb a, .breadcrumb a:visited { color: #107FC9; text-decoration: none; }
 ol.breadcrumb {margin: 1em 0}
 .breadcrumb li {line-height: normal; margin-bottom: 0; font-size: 0.8rem; }
 .breadcrumb>li+li:before { padding: 0 5px; color: #ccc; content: "/\00a0"; }
