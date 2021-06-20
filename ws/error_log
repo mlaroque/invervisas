@@ -1939,3 +1939,14 @@ END AS `detailSort`
 [18-Jun-2021 19:16:34 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 21
 [18-Jun-2021 19:16:34 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 44
 [18-Jun-2021 19:16:34 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 51
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: pais_interes in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 5
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: quedeseas in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 6
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: otro_asunto in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 7
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: nacionalidad in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 8
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: pais_residencia in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 9
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: telefono in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 11
+[19-Jun-2021 21:41:09 UTC] PHP Notice:  Undefined index: contacto_preferido in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 13
+[19-Jun-2021 21:41:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 21
+[19-Jun-2021 21:41:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 21
+[19-Jun-2021 21:41:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 44
+[19-Jun-2021 21:41:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 51
