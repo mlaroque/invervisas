@@ -3,23 +3,54 @@
     include dirname(__DIR__) . "/functions/not_wp_functions.php";
 
     $email = $_POST['email'];
-    $random_key = generate_random_key();
+    $post_id = $_POST['post_id'];
+    $pais = $_POST['pais'];
 
     try {
         $conn = getDBConn_out_WP();
         
-        // $sql = "INSERT INTO `LCMN_MAS_INFO`(`PAIS_INTERES`, `QUE_DESEAS`, `OTRO_ASUNTO`, `NACIONALIDAD`, `PAIS_RESIDENCIA`, `NOMBRE`, `TELEFONO`, `EMAIL`, `CONTACTO_PREFERIDO`, `LANDING_PAGE`,`ID_BTN_DESCARGA`) VALUES ('".$pais_interes ."','".implode(",", $quedeseas)."','".$otro_asunto."','".$nacionalidad."','".$pais_residencia."','".$nombre."','".$telefono."','".$email."','".implode(",", $contacto_preferido)."','".$post_title."','".$id_boton."')";
+        $sql = "INSERT INTO `LCMN_DESCARGAS`(`POST_ID`, `PAIS`, `EMAIL`) VALUES (\"$post_id\", \"$pais\", \"$email\")";
         
-        // $stmt = $conn->prepare($sql);
-        // $stmt->execute();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
     
     }catch (PDOException $e) {
         $data['error'] = 'ERROR: No se conecto a la base de datos..!';
     }
 
-    $headers = "From: Contacto Invervisas<contacto@invervisas.com>\r\n";
-    $headers .= "Reply-To: no-reply@invervisas.com\r\n";
-    $headers .= "Return-Path: no-reply@invervisas.com\r\n";
+    if($pais == 'portugal'){
+        $url_descarga = 'https://drive.google.com/file/d/1V-d87z6784rH57-u5sSEn_ZnT55eQtSe/view?usp=sharing';
+    }elseif($pais == 'singapur'){
+        $url_descarga = 'https://drive.google.com/file/d/1JPJFeHbAadcASg05wBm-hnPLvvpEvRA1/view?usp=sharing';
+    }elseif($pais == 'grecia'){
+        $url_descarga = 'https://drive.google.com/file/d/16R1-CCS6ztDZbavivS085pwYg4nnQjOR/view?usp=sharing';
+    }elseif($pais == 'espana'){
+        $url_descarga = 'https://drive.google.com/file/d/10xgGoDu4g74ryLVSNf3NkhBFKqn8PB_i/view?usp=sharing';
+    }elseif($pais == 'dominica'){
+        $url_descarga = 'https://drive.google.com/file/d/1RuaU9axp2aR98IQg1exKQsNQlOC2ObDA/view?usp=sharing';
+    }elseif($pais == 'chipre'){
+        $url_descarga = 'https://drive.google.com/file/d/1aanCxQ_uF_Ub26EkiNAlpP5zjebY6Wy-/view?usp=sharing';
+    }elseif($pais == 'australia'){
+        $url_descarga = 'https://drive.google.com/file/d/1CXJY5bIwisbyqln6uyRZAGelnYuqpgwV/view?usp=sharing';
+    }elseif($pais == ' antigua-y-barbuda'){
+        $url_descarga = 'https://drive.google.com/file/d/1qfgk7ZuCjzrPfkoW_sLtxEN7aDVqQJdA/view?usp=sharing';
+    }elseif($pais == 'italia'){
+        $url_descarga = 'https://drive.google.com/file/d/1ScHTtF0yahNler6eQZ1RVcodFpKu-iCP/view?usp=sharing';
+    }elseif($pais == 'reino-unido'){
+        $url_descarga = 'https://drive.google.com/file/d/1ZDmGSngt0XZj0wSFKh_mAXmiEuAUANtk/view?usp=sharing';
+    }elseif($pais == 'st-kitts-y-nevis'){
+        $url_descarga = 'https://drive.google.com/file/d/1YXZ5AEyu-NlgTu0cEfdTi6CS114jzk7m/view?usp=sharing';
+    }elseif($pais == 'santa-lucia'){
+        $url_descarga = 'https://drive.google.com/file/d/1tQIznRefKaVVHTOVJcfqRZZG5LylF-Wv/view?usp=sharing';
+    }elseif($pais == 'irlanda'){
+        $url_descarga = 'https://drive.google.com/file/d/1G0PJBthMfbDE0H2ZnZw8UXD3R9UhR-Ou/view?usp=sharing';
+    }elseif($pais == 'granada'){
+        $url_descarga = 'https://drive.google.com/file/d/1ZvA4lZ37aiWjg2IeT9XC16P0NV1rPHiu/view?usp=sharing';
+    }
+
+    $headers = "From: Contacto Invervisas<info@invervisas.com>\r\n";
+    $headers .= "Reply-To: info@invervisas.com\r\n";
+    $headers .= "Return-Path: info@invervisas.com\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
@@ -43,7 +74,7 @@
                     <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 4px;background-color: #bfb46a;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
                         <tbody>
                             <tr>
-                                <td class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 18px; text-size-adjust: 100%; text-align: center;" valign="middle"><a class="mcnButton " href="https://drive.google.com/file/d/1KAHVhDQxw8Ll2VPQd3MbXmGfyypAg3fK/view?usp=sharing" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;" target="_blank" title="Cotizador de Tarjetas de Crédito">Descargar PDF</a></td>
+                                <td class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 18px; text-size-adjust: 100%; text-align: center;" valign="middle"><a class="mcnButton " href="<?php echo $url_descarga; ?>" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;" target="_blank" title="Descargar PDF">Descargar PDF</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -54,7 +85,7 @@
 
         <p style="text-align: center;">o tambi&eacute;n puedes descargarlo en este enlace:&nbsp;</p>
 
-        <p style="text-align: center;"><a href="https://drive.google.com/file/d/1KAHVhDQxw8Ll2VPQd3MbXmGfyypAg3fK/view?usp=sharing" target="_blank">https://drive.google.com/file/d/1KAHVhDQxw8Ll2VPQd3MbXmGfyypAg3fK/view?usp=sharing</a></p>
+        <p style="text-align: center;"><a href="<?php echo $url_descarga; ?>" target="_blank"><?php echo $url_descarga; ?></a></p>
 
         <h2 style="text-align: center;"><span style="font-family:helvetica;"><strong>Nuestros asesores expertos</strong></span></h2>
 
@@ -87,13 +118,4 @@
         echo "failed";
     }
 
-    function generate_random_key($length = 32) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-    return $randomString;
-}
 ?>

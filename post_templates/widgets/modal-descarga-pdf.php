@@ -9,9 +9,6 @@
       $div_id = "lc_modal";
   }
 
-  if($post->post_name == 'portugal'){
-    $url_pdf = 'https://drive.google.com/file/d/1V-d87z6784rH57-u5sSEn_ZnT55eQtSe/view?usp=sharing';
-  }
 ?>
 <style type="text/css">
     .overlay {
@@ -134,20 +131,20 @@
     <div class="modal" id="pideinfo" tabindex="-1" aria-labelledby="pideinfolabel" aria-hidden="true">
         <div class="modal-content">
 
+        <?php if($modal_id):?>
+            <p><button type="button" class="btn-close float-right" data-dismiss="modal" aria-label="Close"
+                    onclick='overlay("<?php echo $modal_id;?>")'><span
+                    aria-hidden="true">&times;</span></button></p>
+        <?php else: ?>
+            <p><button type="button" class="btn-close float-right" data-dismiss="modal" aria-label="Close"
+                onclick='overlay()'><span aria-hidden="true">&times;</span></button></p>
+        <?php endif;?>
+
             <form method="post" id="form_<?php echo $modal_id;?>">
                 <div class="row">
                     <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 options">
 
                         <h3 class="marPad0"><b class="azul upper">Información de Precios</b></h3>
-
-                        <?php if($modal_id):?>
-                        <p><button type="button" class="btn-close float-right" data-dismiss="modal" aria-label="Close"
-                                onclick='overlay("<?php echo $modal_id;?>")'><span
-                                    aria-hidden="true">&times;</span></button></p>
-                        <?php else: ?>
-                        <p><button type="button" class="btn-close float-right" data-dismiss="modal" aria-label="Close"
-                                onclick='overlay()'><span aria-hidden="true">&times;</span></button></p>
-                        <?php endif;?>
 
                     </div>
                 </div>
@@ -159,7 +156,8 @@
                             placeholder="ej: carlos.diaz@email.com" required="" data-error="Este campo es inválido">
                     </div>
 
-                    <input type="hidden" name="url_descarga" value="<?php echo $url_pdf; ?>">
+                    <input type="hidden" name="post_id" value="<?php echo $post->ID; ?>">
+                    <input type="hidden" name="pais" value="<?php echo $post->post_name; ?>">
 
                 </div>
 

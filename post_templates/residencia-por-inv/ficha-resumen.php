@@ -6,6 +6,7 @@
     $mas_info_en = get_post_meta($post->ID, 'residencia_mas_info_ingles', true);
 
     if($ficha_si_no === "Si"):
+
 ?>
 
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 float-left ficha_box">
@@ -39,7 +40,7 @@
                     <button class="btn btn-ficha-<?php echo $tipo_visa;?>" onclick="overlay('descarga')">Descargar Condiciones <small>(PDF)</small> </button>
                     <?php
                         $GLOBALS['modal_id'] = 'descarga'; 
-                        get_template_part('post_templates/widgets/pide-info'); 
+                        get_template_part('post_templates/widgets/modal-descarga-pdf'); 
                     ?>
                 <?php else: ?>
                     <a target="_blank" class="btn btn-ficha-<?php echo $tipo_visa;?>" href="<?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_boton_condiciones', true ). '&pi=' . $post->post_title  . '&min=y'; ?>">Descargar Condiciones <small>(PDF)</small></a>
