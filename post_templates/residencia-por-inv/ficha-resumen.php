@@ -44,8 +44,10 @@
                     ?>
                 <?php else: ?>
                     <a target="_blank" class="btn btn-ficha-<?php echo $tipo_visa;?>" href="<?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_boton_condiciones', true ). '&pi=' . $post->post_title  . '&min=y'; ?>">Descargar Condiciones <small>(PDF)</small></a>
-                    <a class="btn btn-ficha-<?php echo $tipo_visa;?>" href="<?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_boton_solicitar', true ). '?pi=' . $post->post_title; ?>">Solicitar más información</a>
                 <?php endif; ?>
+
+                <a class="btn btn-ficha-<?php echo $tipo_visa;?>" href="<?php echo get_post_meta( $post->ID, 'residencia_inv_'.$tipo_visa.'_boton_solicitar', true ). '?pi=' . $post->post_title; ?>">Solicitar más información</a>
+
                 
             </div>
         </div>

@@ -32,7 +32,7 @@
         $url_descarga = 'https://drive.google.com/file/d/1aanCxQ_uF_Ub26EkiNAlpP5zjebY6Wy-/view?usp=sharing';
     }elseif($pais == 'australia'){
         $url_descarga = 'https://drive.google.com/file/d/1CXJY5bIwisbyqln6uyRZAGelnYuqpgwV/view?usp=sharing';
-    }elseif($pais == ' antigua-y-barbuda'){
+    }elseif($pais == 'antigua-y-barbuda'){
         $url_descarga = 'https://drive.google.com/file/d/1qfgk7ZuCjzrPfkoW_sLtxEN7aDVqQJdA/view?usp=sharing';
     }elseif($pais == 'italia'){
         $url_descarga = 'https://drive.google.com/file/d/1ScHTtF0yahNler6eQZ1RVcodFpKu-iCP/view?usp=sharing';
@@ -49,13 +49,14 @@
     }
 
     $headers = "From: Contacto Invervisas<info@invervisas.com>\r\n";
+    $headers .= 'Cc: jose.saro@percheronadvisory.com' . "\r\n";
     $headers .= "Reply-To: info@invervisas.com\r\n";
     $headers .= "Return-Path: info@invervisas.com\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-    $to = "erick@lacomuna.mx";
-    $subject = "Nuevo Contacto";
+    $to = $email;
+    $subject = "Gracias por solicitar descarga";
     $message = "";
     
     ob_start();
