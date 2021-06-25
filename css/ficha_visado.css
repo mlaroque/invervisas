@@ -33,7 +33,8 @@
 .btn-ficha-perm, .btn-ficha-perm:visited { background: #182848; border-color: #182848; color: #fff; }
 .btn-ficha-perm:hover, .btn-ficha-perm:focus { background: #434d6b; border-color: #434d6b; color: #fff; }
 
-.btn-ficha-temp, .btn-ficha-temp:visited, .btn-ficha-ciud, .btn-ficha-ciud:visited { background: #bfb56a; border-color: #bfb56a; color: #fff; }
+.btn-ficha-temp, .btn-ficha-temp:visited, .btn-ficha-ciud, .btn-ficha-ciud:visited { background: #bfb56a; border-color: #bfb56a; color: #fff; cursor: pointer;
+font-family: 'Josefin Sans', sans-serif; }
 .btn-ficha-temp:hover, .btn-ficha-temp:focus,.btn-ficha-ciud:hover, .btn-ficha-ciud:focus { background: #cec487; border-color: #cec487; color: #fff; }
 
 

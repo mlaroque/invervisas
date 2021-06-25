@@ -54,10 +54,8 @@
     	$message .= '</ul>';
     	$message .= 'Saludos,<br>';
     	$message .= 'El equipo de Invervisas.com';
-
-		$lead_headers = $headers . 'Cc: jose.saro@percheronadvisory.com' . "\r\n";
 		
-		$success = mail($to, $subject, $message, $lead_headers); //email para Alice con CC: afiliado
+		$success = mail($to, $subject, $message, $headers); 
 
 		ob_start();
 	?>

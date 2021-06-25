@@ -2,6 +2,7 @@
 
     include dirname(__DIR__) . "/functions/not_wp_functions.php";
 
+    $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $post_id = $_POST['post_id'];
     $pais = $_POST['pais'];
@@ -9,7 +10,7 @@
     try {
         $conn = getDBConn_out_WP();
         
-        $sql = "INSERT INTO `LCMN_DESCARGAS`(`POST_ID`, `PAIS`, `EMAIL`) VALUES (\"$post_id\", \"$pais\", \"$email\")";
+        $sql = "INSERT INTO `LCMN_DESCARGAS`(`POST_ID`, `PAIS`, 'NOMBRE', `EMAIL`) VALUES (\"$post_id\", \"$pais\", \"$nombre\", \"$email\")";
         
         $stmt = $conn->prepare($sql);
         $stmt->execute();
@@ -49,7 +50,7 @@
     }
 
     $headers = "From: Contacto Invervisas<info@invervisas.com>\r\n";
-    $headers .= 'Cc: jose.saro@percheronadvisory.com' . "\r\n";
+    // $headers .= 'Cc: jose.saro@percheronadvisory.com' . "\r\n";
     $headers .= "Reply-To: info@invervisas.com\r\n";
     $headers .= "Return-Path: info@invervisas.com\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
@@ -109,14 +110,28 @@
         <p style="text-align: center;"><span style="color:#696969;"><span style="font-family:helvetica;"><b>OFICINA M&Eacute;XICO &nbsp;</b>Plaza Para&iacute;so, 10 Avenida Sur 10, Playacar, 77717 Playa del Carmen, Q.R., M&eacute;xico</span></span></p>
     </body>
 <?php
-    $message = ob_get_clean();
+    $user_message = ob_get_clean();
 
-    $success = mail($to, $subject, $message, $headers);
+    $user_email_success = mail($to, $subject, $user_message, $headers);
     
-    if($success){
+    if($user_email_success){
         echo  "success";
     }else{
         echo "failed";
     }
+
+
+    $message .= 'Hola,<br><br>';
+    $message .= 'Has recibido un nuevo contacto, contáctalo a la brevedad:<br>';
+    $message .= '<ul>';
+    $message .= '<li><b>Nombre</b>: '.$nombre.'</li>';
+    $message .= '<li><b>Email</b>: '.$email.'</li>';
+    $message .= '<li><b>País de interes</b>: '.$pais.'</li>';
+    $message .= '</ul>';
+    $message .= 'Saludos,<br>';
+    $message .= 'El equipo de Invervisas.com';
+
+    mail('info@invervisas.com','Nuevo contacto', $message, $headers);
+
 
 ?>
