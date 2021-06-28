@@ -2137,3 +2137,6 @@ END AS `detailSort`
 [24-Jun-2021 15:03:03 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 21
 [24-Jun-2021 15:03:03 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 44
 [24-Jun-2021 15:03:03 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 51
+[27-Jun-2021 08:49:25 UTC] PHP Notice:  Undefined index: contacto_preferido in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 13
+[27-Jun-2021 08:49:26 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 21
+[27-Jun-2021 08:49:26 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/u967210414/domains/invervisas.com/public_html/wp-content/themes/LCtheme2020/ws/save-contact.php on line 51
