@@ -131,7 +131,7 @@
     $message .= 'Saludos,<br>';
     $message .= 'El equipo de Invervisas.com';
 
-    mail('info@invervisas.com','Nuevo contacto', $message, $headers);
+    mail('info@invervisas.com','Nueva Descarga - '.$pais, $message, $headers);
 
 
 ?>
